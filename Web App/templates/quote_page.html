@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Machiney Quote{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"
+      href="{{url_for('.static', filename='bootswatch.css')}}">
+{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Machiney Quotes</a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home" class="active"><span class="glyphicon glyphicon-search"></span></a></li>
+        <li><a href="quote">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+      <blockquote class="blockquote-reverse">
+        <p class="mb-0">{{ quote }}</p>
+        <footer class="blockquote-footer">{{ name }}</footer>
+      </blockquote>
+  </div>
+</div>
+{% endblock %}
