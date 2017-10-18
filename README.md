@@ -1,6 +1,6 @@
 # Machiney-Quotes
 
-Repository for Machiney Quotes
+Repository for Machiney Quotes Web App by Jeremy Fisher and Zachary Fisher
 
 Run using console:
 
@@ -9,6 +9,6 @@ export FLASK_APP=main.py
 flask run
 ```
 
-Requires the following dependencies
+Web app requires the following python dependencies to run:
  - Flask
  - Flask-Bootstrap
