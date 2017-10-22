@@ -1,31 +1,4 @@
 {% extends "machiney_template.html" %} {% block content %}
-<style>
-  .wt {
-    color: white;
-  }
-
-  .mb-0 {
-    font-size: 22px;
-  }
-
-  .carousel-inner {
-    background-color: #404040;
-  }
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .thingy {
-    background-color: #404040;
-  }
-</style>
 
 <div class="row">
   <div class="no-padding col-lg-12  col-md-12 col-sm-12 col-xs-12" id="">
@@ -38,10 +11,10 @@
       <div class="carousel-inner">
         {% for quote in quotes %}
         <div class="item {% if loop.index == 1 %} active {% endif %}">
-          <img src="{{url_for('.static', filename=quote.image)}}" style="max-width:100%; max-height:100%; vertical-align: middle;" alt="Los Angeles">
+          <img src="{{url_for('static', filename=quote.image)}}" style="max-width:100%; max-height:100%; vertical-align: middle;">
           <div class="carousel-caption">
             <blockquote class="blockquote">
-              <span class="mb-0 thingy">{{quote.quote_text}}</p>
+              <span class="mb-0">{{quote.quote_text}}</p>
               <footer class="blockquote-footer wt"><span class="thingy">{{quote.person}}</span></footer>
             </blockquote>
           </div>
@@ -63,7 +36,7 @@
 <div class="container">
   <h1>Say just the right thing.</h1>
   <p class="lead">
-    Unlike other quote repositories, Machiney Quotes uses advanved machine learning algorithms to deliver 100% misattributed quotes. For when you need just the right thing to say.
+    Unlike our competitors, Machiney Quotes uses advanced machine learning algorithms to deliver 100% insightful and misattributed quotes. For when you need just the right thing to say.
   </p>
   <div class="input-group">
     <input type="text" class="form-control" placeholder="Search for people or sentiments...">
