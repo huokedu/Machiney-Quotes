@@ -2,23 +2,21 @@ from flask import Flask
 from flask_bootstrap import Bootstrap
 from flask import render_template
 from random import randint
+from form import LoginForm
 
 app = Flask(__name__)
+app.config.from_object('config')
 Bootstrap(app)
 
-@app.route('/home')
-def index():
-    return render_template('home.html')
-
-quotes = '''Yes is my fate in that mind is true
+quotes = '''Yes is my fate in that mind is true.
 Try a little bit is enjoying any other than a flame
 The property, look like with stars shakes and actions
 You have he written to feel the spine men
 Be a phase is the straight of our human truth
 Why come into you get every money in dying
 Then what you will otherwise no make such mistakes
-How me scratch twice out even no way long tv it
 Who you can't afford any day would write that'll each other upon my soul
+Ones needs a sings to be, taught, but as touched, for grace.
 Drink with their veil or a private refuge remains growth
 Achieve, and character's entire unity in his bicycle
 Who's it's a simple word for being
@@ -43,10 +41,64 @@ Nelson Mandela
 Winston Churchill
 Bill Gates
 Muhammad Ali
-Mahatma Gandhi'''.split('\n')
+Mahatma Gandhi
+Paul McCartney
+Plato
+Queen Elizabeth I
+Queen Victoria
+John M Keynes
+Mikhail Gorbachev
+Jawaharlal Nehru
+Leonardo da Vinci
+Louis Pasteur
+Leo Tolstoy
+Pablo Picasso
+Vincent Van Gogh
+Franklin D. Roosevelt
+Pope John Paul I
+Thomas Edison
+Rosa Parks
+Lyndon Johnson
+Oprah Winfrey
+Indira Gandhi
+Eva Peron
+Benazir Bhutto
+Desmond Tutu
+Dalai Lama
+Walt Disney
+Neil Armstrong
+Peter Sellers
+Barack Obama
+Malcolm X
+J.K.Rowling
+Richard Branson
+Angelina Jolie
+Jesse Owens
+Ernest Hemingway
+John Lennon
+Henry Ford
+Haile Selassie
+Ludwig Beethoven'''.split('\n')
+
+def gen_quote(_img):
+    return {'quote_text': quotes[randint(0, len(quotes) - 1)],
+            'person': people[randint(0, len(people) - 1)],
+            'image': 'pic{}.jpg'.format(_img)}
+
+@app.route('/home')
+def index():
+    quote_list = [gen_quote(i) for i in range(4,7)]
+    return render_template('home.html', quotes=quote_list)
 
 @app.route('/quote')
 def quote():
-    display_quote = quotes[randint(0, len(quotes) - 1)]
-    display_person = people[randint(0, len(people) - 1)]
-    return render_template('quote_page.html', quote=display_quote, name=display_person)
+    quote_list = [gen_quote(i) for i in range(4,7)]
+    return render_template('quote_page.html', quotes=quote_list)
+
+# Test for forms
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     form = LoginForm()
+#     return render_template('form.html',
+#                            title='Sign In',
+#                            form=form)

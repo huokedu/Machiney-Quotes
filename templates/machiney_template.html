@@ -1,14 +1,11 @@
-{% extends "bootstrap/base.html" %}
-{% block title %}Machiney Quote{% endblock %}
-
-{% block styles %}
-{{super()}}
-<link rel="stylesheet"
-      href="{{url_for('.static', filename='bootswatch.css')}}">
-{% endblock %}
-
-{% block navbar %}
-<nav class="navbar navbar-default">
+{% extends "bootstrap/base.html" %} {% block title %}Machiney Quotes{% endblock %} {% block styles %} {{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='lumen.css')}}"> {% endblock %} {% block navbar %}
+<style>
+  body {
+    padding-top: 53px;
+  }
+</style>
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -21,11 +18,10 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home" class="active"><span class="glyphicon glyphicon-search"></span></a></li>
-        <li><a href="quote">About</a></li>
+        <li><a href="home" class="active">Home</a></li>
+        <li><a href="quote">Random</a></li>
       </ul>
     </div>
   </div>
 </nav>
 {% endblock %}
-
