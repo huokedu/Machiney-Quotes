@@ -10,5 +10,6 @@ flask run
 ```
 
 Web app requires the following python dependencies to run:
- - Flask
- - Flask-Bootstrap
+ - flask
+ - flask_bootstrap
+ - flask_wtf
