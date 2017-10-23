@@ -1,5 +1,6 @@
 {% extends "bootstrap/base.html" %} {% block title %}Machiney Quotes{% endblock %} {% block styles %} {{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='lumen.css')}}"> {% endblock %} {% block navbar %}
+<link rel="stylesheet" href="{{url_for('.static', filename='lumen.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='mq.css')}}"> {% endblock %} {% block navbar %}
 <style>
   body {
     padding-top: 53px;
@@ -18,7 +19,8 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="home" class="active">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="latest">Latest</a></li>
         <li><a href="quote">Random</a></li>
       </ul>
     </div>
