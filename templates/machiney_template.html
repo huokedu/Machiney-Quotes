@@ -14,9 +14,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="latest">Latest</a></li>
-        <li><a href="quote">Random</a></li>
+        <li {% if request.path=='/' %}class="active" {% endif %}><a href="/">Home</a></li>
+        <li {% if request.path=='/latest' %}class="active" {% endif %}><a href="latest">Latest</a></li>
+        <li {% if request.path=='/quote' %}class="active" {% endif %}><a href="quote">Random</a></li>
       </ul>
     </div>
   </div>
