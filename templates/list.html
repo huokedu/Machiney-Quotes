@@ -1,24 +1,24 @@
-{% extends "machiney_template.html" %} {% block content %}
+{% extends "machiney_template.html" %} {% block inner_content %}
 
 <div class="container">
   <h1>Latest quotes</h1>
-  
+
 
   <div class="quotecontainer">
-  {% for quote in quotes %}
-  	<div class="quotebox" style="background-image:url({{url_for('static', filename=quote.image)}})">
-		<div class="quoteboxcontents">
-			<div class="wisdom">
-			  	{{quote.quote_text}}
-			</div>
-			<div class="origin">
-				{{quote.person}}
-			</div>
-		</div>
-	</div>
-  {% endfor %}
+    {% for quote in quotes %}
+    <div class="quotebox" style="background-image:url({{url_for('static', filename=quote.image)}})">
+      <div class="quoteboxcontents">
+        <div class="wisdom">
+          {{quote.quote_text}}
+        </div>
+        <div class="origin">
+          {{quote.person}}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
   </div>
-  
+
 </div>
 </div>
 {% endblock %}

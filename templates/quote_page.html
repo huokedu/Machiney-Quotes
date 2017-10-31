@@ -1,12 +1,10 @@
-{% extends "machiney_template.html" %}
-
-{% block content %}
+{% extends "machiney_template.html" %} {% block inner_content %}
 <div class="container">
   <div class="jumbotron">
-      <blockquote class="blockquote-reverse">
-        <p class="mb-0">{{ quote }}</p>
-        <footer class="blockquote-footer">{{ name }}</footer>
-      </blockquote>
+    <blockquote class="blockquote-reverse">
+      <p class="mb-0">{{ quote }}</p>
+      <footer class="blockquote-footer">{{ name }}</footer>
+    </blockquote>
   </div>
 </div>
 {% endblock %}

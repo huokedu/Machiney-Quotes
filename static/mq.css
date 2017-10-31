@@ -1,6 +1,6 @@
   .wt {
     color: white;
-	font-size: 16pt;
+    font-size: 16pt;
   }
 
   .mb-0 {
@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
   }
-  
+
   blockquote {
 	  border: none !important;
   }
@@ -29,7 +29,7 @@
   h1 {
 	  margin-top: 30pt;
   }
-  
+
   .quotebox {
 	  float: left;
 	  display: table;
@@ -40,35 +40,39 @@
       box-sizing: border-box;
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
-	  
+
 	  border: 5px solid white;
-	  
+
 	  background-size: cover;
-	  background-position: center; 
-	  
+	  background-position: center;
+
 	  padding: 7px;
 	  text-align: center;
 	  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-	  
+
 	  padding: 20px;
   }
-  
+
   .quoteboxcontents {
       display: table-cell;
       vertical-align: middle;
   }
-  
+
   .wisdom {
 		color: white;
 		font-size: 13pt;
   }
-  
+
   .origin {
 		color: white;
 		font-size: 11pt;
   }
-  
+
   .quotecontainer {
 	  margin-left: -5px;
 	  margin-right: -5px;
+  }
+
+  .mqfooter {
+    padding-bottom: 20px;
   }
