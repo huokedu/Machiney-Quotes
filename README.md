@@ -2,6 +2,8 @@
 
 Repository for Machiney Quotes Web App by Jeremy Fisher and Zachary Fisher
 
+![screen](screen.png)
+
 Run using console:
 
 ```shell
