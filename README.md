@@ -1,4 +1,4 @@
-# Machiney-Quotes
+# Machiney Quotes
 
 Repository for Machiney Quotes Web App by Jeremy Fisher and Zachary Fisher
 
@@ -15,3 +15,9 @@ Web app requires the following python dependencies to run:
  - flask
  - flask_bootstrap
  - flask_wtf
+
+To install these dependencies, just use:
+
+~~~~shell
+pip install -r requirements.txt
+~~~~
