@@ -2,7 +2,7 @@
 
 Repository for Machiney Quotes Web App by Jeremy Fisher and Zachary Fisher
 
-![screen](screen.png)
+![Imgur](https://i.imgur.com/gHYrx1F.png)
 
 Run using console:
 
